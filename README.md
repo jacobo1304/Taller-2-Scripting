@@ -65,3 +65,73 @@ class Barco {
 }
 
 ```
+
+### Ejemplo observer con delegados
+
+```C#
+using System;
+
+namespace NombreDelProyecto
+{
+    
+    delegate void NotifyDelegate();
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Faro faroPrincipal = new Faro();
+            Barco barco1 = new Barco("BarcoA");
+            Barco barco2 = new Barco("BarcoB");
+            Barco barco3 = new Barco("BarcoC");
+
+           
+            faroPrincipal.OnNotify += barco1.Update;
+            faroPrincipal.OnNotify += barco2.Update;
+            faroPrincipal.OnNotify += barco3.Update;
+
+            Console.WriteLine("Presiona cualquier tecla para activar el faro y notificar a los barcos. Presiona 'q' para salir.");
+
+            while (true)
+            {
+                var key = Console.ReadKey(true).Key;
+                if (key == ConsoleKey.Q)
+                {
+                    break;
+                }
+
+                faroPrincipal.NotifyObservers();
+            }
+        }
+    }
+
+    class Faro
+    {
+        
+        public event NotifyDelegate OnNotify;
+
+       
+        public void NotifyObservers()
+        {
+            OnNotify?.Invoke();  
+        }
+    }
+
+    class Barco
+    {
+        private string nombre;
+
+        public Barco(string nombre)
+        {
+            this.nombre = nombre;
+        }
+
+      
+        public void Update()
+        {
+            Console.WriteLine($"{nombre} ha recibido la señal del faro.");
+        }
+    }
+}
+
+```

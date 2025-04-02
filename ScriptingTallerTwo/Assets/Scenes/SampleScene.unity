@@ -721,6 +721,7 @@ GameObject:
   - component: {fileID: 1029111925}
   - component: {fileID: 1029111924}
   - component: {fileID: 1029111926}
+  - component: {fileID: 1029111927}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -772,6 +773,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoCarro: {fileID: 2094221585}
   botonMostrar: {fileID: 1378944483}
+--- !u!114 &1029111927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029111923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50138989a9639d94f9d0a0d1d4c0f09a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoTransporte: {fileID: 2094221585}
+  botonCambiar: {fileID: 1284524251}
 --- !u!1 &1078432544
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,7 +912,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Medio de Transporte
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -987,7 +1002,7 @@ GameObject:
   - component: {fileID: 1284524252}
   - component: {fileID: 1284524251}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Strategy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1108,7 +1123,7 @@ GameObject:
   - component: {fileID: 1378944484}
   - component: {fileID: 1378944483}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Facade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

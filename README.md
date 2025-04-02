@@ -249,4 +249,41 @@ public class CoffeeDecorator : ICoffee
     public virtual string GetDescription() => _coffee.GetDescription();
     public virtual double GetCost() => _coffee.GetCost();
 }
+
+// Decoradores concretos
+public class MilkDecorator : CoffeeDecorator
+{
+    public MilkDecorator(ICoffee coffee) : base(coffee) { }
+    public override string GetDescription() => _coffee.GetDescription() + ", con leche";
+    public override double GetCost() => _coffee.GetCost() + 1.5;
+}
+
+public class SugarDecorator : CoffeeDecorator
+{
+    public SugarDecorator(ICoffee coffee) : base(coffee) { }
+    public override string GetDescription() => _coffee.GetDescription() + ", con azúcar";
+    public override double GetCost() => _coffee.GetCost() + 0.5;
+}
+
+// Clase para el patrón Facade
+public class CoffeeOrderFacade
+{
+    public void OrderCoffee()
+    {
+        ICoffee coffee = new SimpleCoffee();
+        coffee = new MilkDecorator(coffee);
+        coffee = new SugarDecorator(coffee);
+        Console.WriteLine($"Pedido: {coffee.GetDescription()} - Precio: ${coffee.GetCost()}");
+    }
+}
+
+// Programa principal
+class Program
+{
+    static void Main()
+    {
+        CoffeeOrderFacade facade = new CoffeeOrderFacade();
+        facade.OrderCoffee();
+    }
+}
 ```

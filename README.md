@@ -223,3 +223,30 @@ namespace NombreDelProyecto
 }
 
 ```
+### ejemplo patron decorador y facade
+```
+using System;
+
+// Interfaz base para el patrón Decorador
+public interface ICoffee
+{
+    string GetDescription();
+    double GetCost();
+}
+
+// Clase concreta
+public class SimpleCoffee : ICoffee
+{
+    public string GetDescription() => "Café simple";
+    public double GetCost() => 5.0;
+}
+
+// Decorador base
+public class CoffeeDecorator : ICoffee
+{
+    protected ICoffee _coffee;
+    public CoffeeDecorator(ICoffee coffee) { _coffee = coffee; }
+    public virtual string GetDescription() => _coffee.GetDescription();
+    public virtual double GetCost() => _coffee.GetCost();
+}
+```

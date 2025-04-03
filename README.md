@@ -356,22 +356,22 @@ class Program
     {
         GodObject store = new GodObject();
 
-        // Agregar productos
+        
         store.AddProduct("Laptop");
         store.AddProduct("Teléfono");
 
-        // Registrar clientes
+        
         store.RegisterCustomer("Carlos");
         store.RegisterCustomer("María");
 
-        // Mostrar productos y clientes
+        
         store.ShowProducts();
         store.ShowCustomers();
 
-        // Procesar una compra
+        
         store.ProcessPurchase("Carlos", "Laptop");
 
-        // Enviar el producto
+        
         store.ShipOrder("Carlos", "Laptop");
     }
 }

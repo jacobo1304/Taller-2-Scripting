@@ -377,7 +377,7 @@ class Program
 }
 ```
 ### ejemplo 2 - codigo espagueti (codigo mal estrucutrado, dificil de leer y entender)
-```
+```C#
 using System;
 using System.Collections.Generic;
 

@@ -385,7 +385,7 @@ class Program
 {
     static List<string> clientes = new List<string>();
     static List<string> reservas = new List<string>();
-    
+
     static void Main()
     {
         Console.WriteLine("Bienvenido al sistema de reservas");
@@ -399,6 +399,7 @@ class Program
 
             string opcion = Console.ReadLine();
 
+            // agrega al cliente
             if (opcion == "1")
             {
                 Console.WriteLine("Ingrese nombre del cliente:");
@@ -406,6 +407,7 @@ class Program
                 clientes.Add(nombre);
                 Console.WriteLine("Cliente agregado.");
             }
+            // realiza reserva con el nombre del cliente
             else if (opcion == "2")
             {
                 Console.WriteLine("Ingrese nombre del cliente para la reserva:");
@@ -431,6 +433,7 @@ class Program
                     Console.WriteLine("Cliente no registrado.");
                 }
             }
+            // muestra reservas realizadas
             else if (opcion == "3")
             {
                 Console.WriteLine("Reservas:");
@@ -439,6 +442,7 @@ class Program
                     Console.WriteLine(reservas[i]);
                 }
             }
+            // termina el programa
             else if (opcion == "4")
             {
                 break;
@@ -450,5 +454,6 @@ class Program
         }
     }
 }
+
 ```
 

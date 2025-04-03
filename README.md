@@ -224,7 +224,7 @@ namespace NombreDelProyecto
 
 ```
 ### ejemplo patron decorador y facade
-```
+``` C#
 using System;
 
 // Interfaz base para el patrón Decorador
@@ -290,7 +290,7 @@ class Program
 ## ejemplos de antipatron
 
 ### ejemplo 1 - godObject (una clase que maneja demasiadas tareas diferentes)
-```
+``` C#
 using System;
 using System.Collections.Generic;
 

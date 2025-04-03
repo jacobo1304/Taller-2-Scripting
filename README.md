@@ -376,4 +376,79 @@ class Program
     }
 }
 ```
+### ejemplo 2 - codigo espagueti (codigo mal estrucutrado, dificil de leer y entender)
+```
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static List<string> clientes = new List<string>();
+    static List<string> reservas = new List<string>();
+    
+    static void Main()
+    {
+        Console.WriteLine("Bienvenido al sistema de reservas");
+
+        while (true)
+        {
+            Console.WriteLine("1. Agregar cliente");
+            Console.WriteLine("2. Hacer reserva");
+            Console.WriteLine("3. Ver reservas");
+            Console.WriteLine("4. Salir");
+
+            string opcion = Console.ReadLine();
+
+            if (opcion == "1")
+            {
+                Console.WriteLine("Ingrese nombre del cliente:");
+                string nombre = Console.ReadLine();
+                clientes.Add(nombre);
+                Console.WriteLine("Cliente agregado.");
+            }
+            else if (opcion == "2")
+            {
+                Console.WriteLine("Ingrese nombre del cliente para la reserva:");
+                string cliente = Console.ReadLine();
+                bool encontrado = false;
+                for (int i = 0; i < clientes.Count; i++)
+                {
+                    if (clientes[i] == cliente)
+                    {
+                        encontrado = true;
+                        break;
+                    }
+                }
+                if (encontrado)
+                {
+                    Console.WriteLine("Ingrese la fecha de la reserva:");
+                    string fecha = Console.ReadLine();
+                    reservas.Add(cliente + " - " + fecha);
+                    Console.WriteLine("Reserva realizada.");
+                }
+                else
+                {
+                    Console.WriteLine("Cliente no registrado.");
+                }
+            }
+            else if (opcion == "3")
+            {
+                Console.WriteLine("Reservas:");
+                for (int i = 0; i < reservas.Count; i++)
+                {
+                    Console.WriteLine(reservas[i]);
+                }
+            }
+            else if (opcion == "4")
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Opción inválida.");
+            }
+        }
+    }
+}
+```
 

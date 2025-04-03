@@ -287,3 +287,93 @@ class Program
     }
 }
 ```
+## ejemplos de antipatron
+
+### ejemplo 1 - godObject (una clase que maneja demasiadas tareas diferentes)
+```
+using System;
+using System.Collections.Generic;
+
+class GodObject
+{
+    // Lista de productos disponibles en la tienda
+    private List<string> Products = new List<string>();
+
+    // Lista de clientes registrados
+    private List<string> Customers = new List<string>();
+
+    // Método para agregar productos a la tienda
+    public void AddProduct(string product)
+    {
+        Products.Add(product);
+        Console.WriteLine($"Producto agregado: {product}");
+    }
+
+    // Método para mostrar productos disponibles
+    public void ShowProducts()
+    {
+        Console.WriteLine("Productos en la tienda:");
+        Products.ForEach(Console.WriteLine);
+    }
+
+    // Método para registrar clientes
+    public void RegisterCustomer(string customer)
+    {
+        Customers.Add(customer);
+        Console.WriteLine($"Cliente registrado: {customer}");
+    }
+
+    // Método para mostrar clientes registrados
+    public void ShowCustomers()
+    {
+        Console.WriteLine("Clientes registrados:");
+        Customers.ForEach(Console.WriteLine);
+    }
+
+    // Método para procesar una compra
+    public void ProcessPurchase(string customer, string product)
+    {
+        if (Customers.Contains(customer) && Products.Contains(product))
+        {
+            Console.WriteLine($"Compra realizada: {customer} compró {product}");
+        }
+        else
+        {
+            Console.WriteLine("Error: Cliente no registrado o producto no disponible.");
+        }
+    }
+
+    // Método para simular el envío del producto
+    public void ShipOrder(string customer, string product)
+    {
+        Console.WriteLine($"Enviando {product} a {customer}...");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        GodObject store = new GodObject();
+
+        // Agregar productos
+        store.AddProduct("Laptop");
+        store.AddProduct("Teléfono");
+
+        // Registrar clientes
+        store.RegisterCustomer("Carlos");
+        store.RegisterCustomer("María");
+
+        // Mostrar productos y clientes
+        store.ShowProducts();
+        store.ShowCustomers();
+
+        // Procesar una compra
+        store.ProcessPurchase("Carlos", "Laptop");
+
+        // Enviar el producto
+        store.ShipOrder("Carlos", "Laptop");
+    }
+}
+```
+

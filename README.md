@@ -275,6 +275,8 @@ namespace NombreDelProyecto
 }
 
 ```
+## Patron decorador y donde se usa en las librerías nativas de C#?
+
 ### ejemplo patron decorador y facade
 ``` C#
 using System;
@@ -508,4 +510,17 @@ class Program
 }
 
 ```
+## Ejercicios en unity
+### A continuación tenemos 4 patrones de diseño implementados con botones interactivos en unity, y una ventana adicional de debug que nos permite ver el patrón observer
+### Adapter
+![Grabacion adapter](https://github.com/user-attachments/assets/45acdbae-048b-436a-97b3-bbd6f1624ef4)
+
+### Decorador 
+![Grabación decorador](https://github.com/user-attachments/assets/aee63541-142d-468c-a449-b0f8549c1a05)
+
+### Facade
+![Facade](https://github.com/user-attachments/assets/a64ec114-ef97-4b99-a67c-0e3c359c2ad4)
+
+### Strategy
+![Strategy](https://github.com/user-attachments/assets/dcb55056-3ca8-4afb-8764-92c0e6257dfa)
 

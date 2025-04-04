@@ -19,9 +19,9 @@ ________________________________________________________________________________
 ### Explica cómo el patrón Singleton asegura que solo haya una instancia de una clase y cuáles son sus posibles usos.
 - El patrón singleton asegura sólo una instancia de una clase mediante una serie de cosas:
 
-    *Instanciación controlada:* La clase internamente se asegura de instanciarse a sí misma, y almacenar esa instancia en una variable estática.
+    *Instanciación controlada:* La clase internamente se asegura de instanciarse a sí misma, y almacenar esa instancia en una variable estática privada.
   
-    *Forma de acceder:* Para acceder a la instancia de un singleton, se proporciona un método estático (comúnmente llamado getInstance()). Este método verifica si ya existe una instancia; si no, la crea. Si ya existe, simplemente la devuelve sin crear una nueva.
+    *Forma de acceder:* Para acceder a la instancia de un singleton, se proporciona un método publico estático (usualmente llamado getInstance()) que verifica si ya existe una instancia; si no, la crea. Si ya existe, simplemente la devuelve.
 
     *Método constructor privado:* Para asegurar la única instancia y que no se pueda instanciar el objeto desde otras clases.
 
@@ -41,7 +41,7 @@ ________________________________________________________________________________
 **Es útil cuando:**
 - Un objeto necesita notificar a varios objetos un cambio de estado o algo específico.
 - Cuando se requiere monitorear eventos y reaccionar a cambios en el sujeto base en tiempo real. 
-- Cuando se necesita enviar alertas o notificaciones a múltiples partes de un sistema.
+- Cuando se necesita enviar alertas a múltiples partes de un sistema.
 
 ______________________________________________________________________________________________________________________________________________________________________________________________________________
 

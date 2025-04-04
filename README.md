@@ -1,6 +1,30 @@
 # Taller-2-Scripting
 ## Preguntas teóricas
+
+### ¿Qué son los principios SOLID y cómo contribuyen a un buen diseño orientado a objetos?
+- los principios SOLID son un conjunto de 5 reglas fundamentales que se aplican en la programación orientada a objetos con el objetivo de crear un software mas organizado y facil de mantener.
+
+*S.O.L.I.D:*
+**Single Responsibility / Responsabilidad Única:** Cada clase debe tener una única responsabilidad
+**Open/Closed Principle / Abierto/Cerrado:** los objetos deben estar abiertos para extensión, puerto cerrado para modificación
+Liskov Substitution Principle / Sustitución de Liskov:  una subclase debe ser capaz de sustituir a su clase base sin causar problemas en el comportamiento del sistema
+**Interface Segregation / Segregación de Interfaces:**  Las clases no deben depender de interfaces que no usan. 
+Dependency Inversion / Inversión de Dependencias: Las clases de alto nivel no deben depender de clases de bajo nivel. Ambos deben depender de abstracciones. Además, las abstracciones no deben depender de los detalles. Los detalles deben depender de las abstracciones.
+
+### Explica cómo el patrón Singleton asegura que solo haya una instancia de una clase y cuáles son sus posibles usos.
+El patrón singleton asegura sólo una instancia de una clase mediante una serie de cosas:
+**Instanciación controlada:** La clase internamente se asegura de instanciarse a sí misma, y almacenar esa instancia en una variable estática.
+**Forma de acceder:** Para acceder a la instancia de un singleton, se proporciona un método estático (comúnmente llamado getInstance()). Este método verifica si ya existe una instancia; si no, la crea. Si ya existe, simplemente la devuelve sin crear una nueva.
+**Método constructor privado:** Para asegurar la única instancia y que no se pueda instanciar el objeto desde otras clases.
+
+Con base en esto el patrón singleton puede ser usado para lo siguiente:
+**Gestionar acceso a recursos compartidos:** cuando un recurso necesita ser accedido múltiples veces a lo largo de la aplicación desde distintos lugares, el patrón singleton evita problemas de acceso simultáneo y optimiza este tipo de acciones.
+**Mantener un sistema de registros** A través de un singleton se puede implementar un sistema de registros de eventos (o logs) en el que todas las actualizaciones permanezcan en un solo archivo o sistema de logs de forma organizada.
+
+
 [preguntas teoricas con repsuesta](https://docs.google.com/document/d/1EWxG7sqi7-Ndyjf9g3W44JX9ZXT4TCCKOv9kYSJyqRU/edit?usp=sharing)
+
+## Ejemplos de patrones
 
 ### Ejemplo Práctico Singleton
 ``` C#
@@ -287,7 +311,7 @@ class Program
     }
 }
 ```
-## ejemplos de antipatron
+## ejemplos de antipatrones
 
 ### ejemplo 1 - godObject (una clase que maneja demasiadas tareas diferentes)
 ``` C#

@@ -35,5 +35,6 @@ public class Adapter : MonoBehaviour
     {
         int numeroEntero = adaptador.Convertir(numeroHexadecimal);
         textoResultado.text = "Número convertido: " + numeroEntero;
+        Observer.Instancia.NotificarUso("Adapter");
     }
 }

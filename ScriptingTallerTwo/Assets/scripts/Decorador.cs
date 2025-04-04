@@ -56,11 +56,13 @@ public class Decorador : MonoBehaviour
     {
         DecoradorMensaje mensajeDecorado = new DecoradorNegrita(mensajeBase);
         textoMostrar.text = mensajeDecorado.ObtenerMensaje();
+        Observer.Instancia.NotificarUso("Decorador");
     }
 
     void DecorarItalica()
     {
         DecoradorMensaje mensajeDecorado = new DecoradorItalica(mensajeBase);
         textoMostrar.text = mensajeDecorado.ObtenerMensaje();
+        Observer.Instancia.NotificarUso("Decorador");
     }
 }

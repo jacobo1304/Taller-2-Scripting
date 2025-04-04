@@ -87,5 +87,6 @@ public class Facade : MonoBehaviour
     void MostrarInformacionCarro()
     {
         textoCarro.text = carro.ObtenerInformacionCarro();
+        Observer.Instancia.NotificarUso("Facade");
     }
 }

@@ -52,6 +52,8 @@ public class Strategy : MonoBehaviour
         else
             medioActual = new Coche();
 
+
         MostrarTransporte();
+        Observer.Instancia.NotificarUso("Strategy");
     }
 }

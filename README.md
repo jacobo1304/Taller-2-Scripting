@@ -45,7 +45,7 @@ ________________________________________________________________________________
 ______________________________________________________________________________________________________________________________________________________________________________________________________________
 
 ### ¿Qué es un delegado?
-- Un delegado es un tipo de variable que almacena métodos, con el cual puedes llamar a varios métodos con solo llamar el nombre del delegado y darle sus parámetros respectivos.
+- Un delegado es un tipo de variable que almacena métodos, Esto permite llamar a esos métodos de forma indirecta usando el nombre del delegado.
 
 ### ¿Qué es un antipatrón? Explique por medio de dos ejemplos.
 - Un antipatrón es una solución mal diseñada ante un problema que termina perjudicando aún más, por lo general, a primera vista o a corto plazo parece que esta solución resuelve un problema, pero a largo plazo solo termina creando más.

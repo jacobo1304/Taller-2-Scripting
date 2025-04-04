@@ -41,7 +41,6 @@ ________________________________________________________________________________
 **Es útil cuando:**
 - Un objeto necesita notificar a varios objetos un cambio de estado o algo específico.
 - Cuando se requiere monitorear eventos y reaccionar a cambios en el sujeto base en tiempo real. 
-- Cuando se necesita enviar alertas a múltiples partes de un sistema.
 
 ______________________________________________________________________________________________________________________________________________________________________________________________________________
 

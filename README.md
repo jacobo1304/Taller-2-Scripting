@@ -276,7 +276,12 @@ namespace NombreDelProyecto
 
 ```
 ## Patron decorador y donde se usa en las librerías nativas de C#?
+El patrón Decorador (también conocido como Wrapper) es un patrón estructural que permite añadir funcionalidades a un objeto de manera dinámica sin modificar su estructura base. Se logra envolviendo el objeto original dentro de otro objeto decorador que extiende su comportamiento. Esto permite una mayor flexibilidad en comparación con la herencia, ya que se pueden agregar o combinar responsabilidades en tiempo de ejecución.
 
+#### Ejemplo de Uso en la Librería Nativa de C#
+Uno de los ejemplos más comunes del patrón Decorador en C# está en la librería System.IO.Stream, donde clases como BufferedStream, GZipStream o CryptoStream extienden el comportamiento de un Stream sin modificarlo.
+
+Otro uso interesante del patrón Decorador en C# está en la librería System.Text con la clase StringWriter, que extiende TextWriter, permitiendo modificar el flujo de salida de texto sin alterar la implementación original de TextWriter.
 ### ejemplo patron decorador y facade
 ``` C#
 using System;
